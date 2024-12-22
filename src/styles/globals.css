@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --border: 0 0% 100%;
+    --foreground: 0 0% 98%;
+
+    --background-gradient: linear-gradient(180deg, hsla(0, 0%, 100%, 0.03), hsla(0, 0%, 100%, 0.1));
+    --grey-50: 0, 0%, 90%;
+    --grey-100: 0, 0%, 80%;
+    --grey-200: 0, 0%, 61%;
+    --grey-300: 0, 0%, 42%;
+    --grey-400: 0, 0%, 26%;
+    --grey-500: 0, 0%, 18%;
+    --grey-600: 240, 5%, 11%;
+    --grey-700: 240, 5%, 7%;
+    --grey-800: 240, 6%, 5%;
+    --grey-900: 240, 8%, 3%;
+
+    --base-white: 0, 0%, 100%;
+
+    --shiki-foreground: #ffffff;
+    --shiki-token-constant: #a7a7a7;
+    --shiki-token-string: #a7a7a7;
+    --shiki-token-comment: #666666;
+    --shiki-token-keyword: #a7a7a7;
+    --shiki-token-parameter: #a7a7a7;
+    --shiki-token-function: #ffffff;
+    --shiki-token-string-expression: #a7a7a7;
+    --shiki-token-punctuation: #a7a7a7;
+    --shiki-token-link: #a7a7a7;
+    --shiki-token-number: #ffffff;
+    --shiki-token-property: #a7a7a7;
+  }
+  
+  img,
+  button {
+    @apply select-none;
+  }
+
+  ::selection {
+    @apply bg-neutral-400/20;
+  }
+}
+
+* {
+  font-variant-ligatures: none;
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(38, 38, 38) transparent;
+}
+
+.font-display {
+  font-variation-settings: "wdth" 115;
+}
+
+.paragraph {
+  letter-spacing: -.1px;
+  --tw-text-opacity: .6;
+  color: hsla(var(--base-white), var(--tw-text-opacity));
+}
+
+@layer utilities {
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute inline-flex size-8 items-center justify-center rounded-full border border-zinc-500 bg-white text-center -indent-px font-mono text-sm font-medium dark:border-zinc-800 dark:bg-grey-600;
+    @apply ml-[-50px] mt-[-4px];
+    content: counter(step);
+  }
+}
