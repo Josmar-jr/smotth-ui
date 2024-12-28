@@ -48,6 +48,7 @@ export default {
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        "spin-fast": "spin .6s linear",
       },
       keyframes: {
         spotlight: {

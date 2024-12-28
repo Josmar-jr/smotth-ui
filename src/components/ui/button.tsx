@@ -8,15 +8,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        outline: "border hover:bg-fd-accent hover:text-fd-accent-foreground",
-        ghost: "hover:bg-fd-accent hover:text-fd-accent-foreground",
+        outline: "border hover:bg-fd-accent hover:text-grey-300",
+        ghost: "hover:bg-fd-accent hover:text-grey-100",
         secondary: "bg-grey-600 text-fd-secondary-foreground",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
-        icon: "p-1.5 [&_svg]:size-5",
+        icon: "p-1.5 [&_svg]:size-4",
       },
     },
   }

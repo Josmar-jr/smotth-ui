@@ -25,7 +25,7 @@ export const components = {
   h1: ({ children, ...props }: React.HTMLProps<HTMLHeadingElement>) => {
     const id = generateId(children?.toString() || "");
     return (
-      <h1 id={id} data-heading="1" {...props}>
+      <h1 id={id} data-heading="1" className="!text-base" {...props}>
         {children}
       </h1>
     );
@@ -36,7 +36,7 @@ export const components = {
       <h2
         id={id}
         data-heading="2"
-        className="font-heading mt-12 scroll-m-20 pb-2 text-2xl font-semibold tracking-tight first:mt-0"
+        className="font-heading mt-12 scroll-m-20 pb-2 text-xl font-semibold tracking-tight first:mt-0"
         {...props}
       >
         {children}
@@ -49,7 +49,7 @@ export const components = {
       <h3
         id={id}
         data-heading="3"
-        className="font-heading mt-6 scroll-m-20 mb-4 text-xl font-semibold tracking-tight"
+        className="font-heading scroll-m-20 mb-2 text-base font-semibold tracking-tight"
         {...props}
       >
         {children}
@@ -100,7 +100,7 @@ export const components = {
     <TabsContent className={cn(className)} {...props} />
   ),
   table: ({ className, ...props }: React.ComponentProps<"table">) => (
-    <div className="not-prose relative w-full table-auto overflow-hidden rounded-lg text-sm border-collapse border border-border/10">
+    <div className="not-prose relative w-full table-auto overflow-hidden rounded-lg text-sm border-collapse">
       <table
         className={cn("w-full caption-bottom text-sm", className)}
         {...props}
@@ -116,7 +116,7 @@ export const components = {
   tr: ({ className, ...props }: React.ComponentProps<"tr">) => (
     <tr
       className={cn(
-        "transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+        "transition-colors hover:bg-muted/50 last:border-0 border-b border-border/10 first:border-t",
         className
       )}
       {...props}
@@ -125,7 +125,7 @@ export const components = {
   th: ({ className, ...props }: React.ComponentProps<"th">) => (
     <th
       className={cn(
-        "h-10 px-3 border border-t-0 border-border/10 text-left align-middle text-muted-foreground [&:has([role=checkbox])]:pr-0 font-semibold bg-grey-600",
+        "h-10 px-2 first:pl-0 text-left [&:has([role=checkbox])]:pr-0 font-semibold",
         className
       )}
       {...props}
@@ -134,7 +134,7 @@ export const components = {
   td: ({ className, ...props }: React.ComponentProps<"td">) => (
     <td
       className={cn(
-        "p-3 border border-border/10 align-middle [&:has([role=checkbox])]:pr-0",
+        "p-2 first:pl-0 align-baseline [&:has([role=checkbox])]:pr-0 [&_div]:text-grey-300 [&_div]:mt-2",
         className
       )}
       {...props}

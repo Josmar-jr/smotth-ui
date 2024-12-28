@@ -38,7 +38,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${doc.title} | Magic UI`,
+    title: `${doc.title} | Smooth UI`,
     description: doc.description,
     openGraph: {
       title: doc.title,
@@ -59,7 +59,7 @@ export async function generateMetadata({
       title: doc.title,
       description: doc.description,
       images: [doc.image],
-      creator: "@dillionverma",
+      creator: "@josmarjr",
     },
   };
 }
@@ -80,21 +80,19 @@ export default async function DocPage({ params }: { params: tParams }) {
   }
 
   return (
-    <main className="py-6 max-w-full xl:max-w-3xl flex-1">
+    <main className="py-6 w-full max-w-3xl flex-1">
       <Breadcrumbs
         backLink="/docs/components"
         currentPage={doc.title}
         groupName="Components"
       />
 
-      <div className="space-y-2 mt-6">
-        <h1 className={cn("scroll-m-20 text-4xl font-bold tracking-tight")}>
+      <div className="space-y-1 mt-6">
+        <h1 className={cn("scroll-m-10 text-3xl font-bold tracking-tight")}>
           {doc.title}
         </h1>
         {doc.description && (
-          <p className="paragraph text-balance text-lg text-muted-foreground">
-            {doc.description}
-          </p>
+          <p className="paragraph text-balance">{doc.description}</p>
         )}
       </div>
       <div className="pb-12 pt-8">

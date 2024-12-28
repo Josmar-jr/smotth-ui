@@ -26,9 +26,9 @@ export function NavigationDesktop() {
             {NAV_LIST_ITEMS.map((item, index) => {
               return (
                 <li key={`${item.name}-${index}`}>
-                  <p className="relative z-10 bg-white pb-4 text-sm/6 font-[450] text-zinc-950 dark:bg-background dark:text-white pt-5">
+                  <div className="relative z-10 bg-white pb-4 text-sm/6 font-[450] text-zinc-950 dark:bg-background dark:text-white pt-5 w-[100px]">
                     {item.name}
-                  </p>
+                  </div>
                   <ul
                     role="list"
                     className="space-y-3.5 border-l border-zinc-200 dark:border-border/10 border-dashed"

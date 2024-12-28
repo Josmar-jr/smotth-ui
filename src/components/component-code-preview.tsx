@@ -3,11 +3,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Children, useMemo } from "react";
 import { Index } from "../../__registry__";
 import { ComponentPreview } from "./component-preview";
+import { cn } from "@/utils/cn";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
   hasReTrigger?: boolean;
   classNameComponentContainer?: string;
+  preview?: boolean;
 }
 
 export function ComponentCodePreview({
@@ -15,6 +17,9 @@ export function ComponentCodePreview({
   children,
   hasReTrigger = false,
   classNameComponentContainer,
+  preview = false,
+  className,
+  ...props
 }: ComponentPreviewProps) {
   const Codes = Children.toArray(children) as React.ReactElement[];
   const Code = Codes[0];
@@ -40,12 +45,20 @@ export function ComponentCodePreview({
   }, [name]);
 
   return (
-    <div className="not-prose relative z-0 flex items-center justify-between pb-4">
+    <div
+      className={cn(
+        "not-prose relative z-0 flex items-center justify-between pb-4",
+        className
+      )}
+      {...props}
+    >
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
-        <TabsList className="">
-          <TabsTrigger value="preview">Preview</TabsTrigger>
-          <TabsTrigger value="code">Code</TabsTrigger>
-        </TabsList>
+        {!preview && (
+          <TabsList>
+            <TabsTrigger value="preview">Preview</TabsTrigger>
+            <TabsTrigger value="code">Code</TabsTrigger>
+          </TabsList>
+        )}
         <TabsContent
           value="preview"
           className="border border-border/10 bg-background"

@@ -6,7 +6,7 @@ author: josmarjr
 published: true
 ---
 
-<ComponentCodePreview name="spotlight-demo" />
+<ComponentCodePreview name="spotlight-demo" hasReTrigger={true} />
 
 ## Installation
 
@@ -31,14 +31,22 @@ npx shadcn@latest add "https://magicui.design/r/animated-beam"
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="spotlight" />
+<ComponentSource name="spotlight"  />
 
 <Step>Copy the highlighted spotlight animation into tailwind.config.js file</Step>
 
-<ComponentSource name="spotlight-talwindcss.config" />
+<ComponentSource name="spotlight-talwindcss.config" noExpand />
 
 </Steps>
 
 </TabsContent>
 
 </Tabs>
+
+## Props
+### Spotlight
+
+| Name               | Default   | Description                                              
+| ------------------ | --------- | -------------------------------------------------------- 
+| __className__      |   __—__   | __String__<div>The class name of the spotlight component.</div>                  
+| __fill__           | __white__ | __String__<div>Hex or RGB color for the spotlight fill.</div>                                      

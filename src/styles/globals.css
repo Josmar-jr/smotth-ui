@@ -60,6 +60,7 @@
   letter-spacing: -.1px;
   --tw-text-opacity: .6;
   color: hsla(var(--base-white), var(--tw-text-opacity));
+  font-size: 1rem;
 }
 
 @layer utilities {

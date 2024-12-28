@@ -10,7 +10,7 @@ export default function DocsLayout({
 }) {
   return (
     <div className="h-full relative">
-      <div className="absolute hidden mx-auto -z-10 inset-0 h-full w-full max-w-[1400px] grid-cols-5 gap-3.5 group-has-[[data-hide-gridlines=true]]/body:opacity-0 lg:grid">
+      <div className="absolute lg:grid hidden mx-auto -z-10 inset-0 h-full w-full max-w-[1400px] grid-cols-5 gap-3.5 group-has-[[data-hide-gridlines=true]]/body:opacity-0">
         <div className="border-dashed border-x border-white/[0.08]" />
         <div className="border-dashed border-x border-white/[0.08] border-r-0" />
         <div className="border-none" />
@@ -20,8 +20,8 @@ export default function DocsLayout({
 
       <Header />
 
-      <div className="mx-auto max-w-[1400px]">
-        <div className="mx-auto flex w-full flex-col items-start md:flex-row md:space-x-12">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-0">
+        <div className="mx-auto flex w-full flex-col items-start md:flex-row lg:space-x-12">
           <NavigationDesktop />
 
           <NavigationMobile />

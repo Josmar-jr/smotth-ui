@@ -27,7 +27,7 @@ export function Header() {
           // delay={0.2}
           className="flex flex-1 items-center justify-end gap-4"
         >
-          <button
+          {/* <button
             // onClick={() => setShowCommandMenu(true)}
             className="flex w-auto items-center justify-between gap-6 rounded-lg border border-border/10 bg-grey-800 px-3 py-[7px] text-xs max-sm:flex-1 sm:w-64"
           >
@@ -38,7 +38,7 @@ export function Header() {
             <span className="flex items-center gap-px rounded border border-border/20 bg-grey-800 px-1.5 py-[1px] text-[10px] font-[460] max-sm:hidden text-grey-300">
               <CommandIcon size={10} />K
             </span>
-          </button>
+          </button> */}
           <a
             href="https://github.com/guhrodrrigues/luxe"
             target="_blank"

@@ -1,4 +1,4 @@
-import * as Base from "@/components/codeblock";
+import * as Base from "@/components/code-block";
 
 /**
  * You are NOT supposed to use this component directly.

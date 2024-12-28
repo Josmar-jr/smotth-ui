@@ -2,7 +2,8 @@
 
 import { cn } from "@/utils/cn";
 import { RotateCw } from "lucide-react";
-import { cloneElement, useState } from "react";
+import { useState } from "react";
+import { Button } from "./ui/button";
 
 type ComponentPreviewProps = {
   component: React.ReactElement;
@@ -16,9 +17,12 @@ export function ComponentPreview({
   className,
 }: ComponentPreviewProps) {
   const [reTriggerKey, setReTriggerKey] = useState<number>(Date.now());
+  const [isAnimateSpin, setIsAnimateSpin] = useState(false);
 
   const reTrigger = () => {
     setReTriggerKey(Date.now());
+    setIsAnimateSpin(true);
+    setTimeout(() => setIsAnimateSpin(false), 1000);
   };
 
   return (
@@ -27,18 +31,21 @@ export function ComponentPreview({
         "flex min-h-[350px] w-full items-center justify-center rounded-md p-10",
         className
       )}
+      key={reTriggerKey}
     >
       {hasReTrigger && (
-        <div
-          className="absolute right-4 top-3 cursor-pointer"
+        <Button
+          className={cn(
+            "absolute right-4 top-3 cursor-pointer z-10 group",
+            isAnimateSpin && "animate-spin-fast"
+          )}
+          size="icon"
           onClick={reTrigger}
         >
-          <RotateCw className="h-4 w-4 text-zinc-500" />
-        </div>
+          <RotateCw className="h-4 w-4 text-zinc-500 group-hover:text-grey-100 transition-colors" />
+        </Button>
       )}
-      {hasReTrigger
-        ? cloneElement(component, { key: reTriggerKey })
-        : component}
+      {component}
     </div>
   );
 }
