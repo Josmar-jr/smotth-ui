@@ -134,7 +134,7 @@ export const components = {
   td: ({ className, ...props }: React.ComponentProps<"td">) => (
     <td
       className={cn(
-        "p-2 first:pl-0 align-baseline [&:has([role=checkbox])]:pr-0 [&_div]:text-grey-300 [&_div]:mt-2",
+        "p-2 first:pl-0 align-baseline [&:has([role=checkbox])]:pr-0 [&_div]:text-grey-200 [&_div]:mt-2 [&_code]:code",
         className
       )}
       {...props}

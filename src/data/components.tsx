@@ -29,6 +29,10 @@ export const NAV_LIST_ITEMS: NavigationGroup[] = [
         name: "Installation",
         href: "/docs/installation",
       },
+      {
+        name: "Components",
+        href: "/docs/components",
+      },
     ],
   },
   {

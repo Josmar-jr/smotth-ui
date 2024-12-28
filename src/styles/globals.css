@@ -73,4 +73,8 @@
     @apply ml-[-50px] mt-[-4px];
     content: counter(step);
   }
+
+  .code {
+    @apply rounded bg-grey-500 px-1.5 py-0.5 font-mono text-sm text-foreground;
+  }
 }

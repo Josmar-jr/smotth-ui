@@ -4,8 +4,8 @@ import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "motion/react";
 import { cn } from "@/utils/cn";
 
-export interface SpotlightCardProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface SpotlightCardProps<T extends React.ElementType = "div"> {
+  as?: T;
   size?: number;
   from?: string;
   via?: string;
@@ -13,9 +13,12 @@ export interface SpotlightCardProps
   opacity?: number;
   isAround?: boolean;
   mode?: "before" | "after";
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export function SpotlightCard({
+export function SpotlightCard<T extends React.ElementType = "div">({
+  as,
   children,
   className,
   size = 100,
@@ -25,7 +28,10 @@ export function SpotlightCard({
   opacity = 100,
   isAround,
   mode = "before",
-}: SpotlightCardProps) {
+  ...props
+}: SpotlightCardProps<T> & React.ComponentPropsWithoutRef<T>) {
+  const Component = as || "div";
+
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(-size);
   const mouseY = useMotionValue(-size);
@@ -84,9 +90,10 @@ export function SpotlightCard({
   }, [from, via, to]);
 
   return (
-    <div
+    <Component
       ref={cardRef}
       className={cn("relative aspect-video overflow-hidden p-[1px]", className)}
+      {...props}
     >
       <motion.div
         className={cn(
@@ -109,6 +116,6 @@ export function SpotlightCard({
       >
         {children}
       </div>
-    </div>
+    </Component>
   );
 }

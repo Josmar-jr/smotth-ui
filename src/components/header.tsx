@@ -37,7 +37,7 @@ export function Header() {
             </span>
           </button> */}
           <a
-            href="https://github.com/guhrodrrigues/luxe"
+            href="https://github.com/josmar-jr/smooth-ui"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md duration-150 hover:text-primary"
@@ -45,7 +45,7 @@ export function Header() {
             <Icons.github className="h-4 w-4 fill-white" />
           </a>
           <a
-            href="https://x.com/guhrodrrigues"
+            href="https://x.com/josmarjunior11"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md duration-150 hover:text-primary"
