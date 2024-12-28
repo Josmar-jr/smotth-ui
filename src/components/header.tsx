@@ -1,12 +1,9 @@
 "use client";
 
-// import Image from "next/image";
 import Link from "next/link";
 
-// import minLogo from "@/assets/min-logo.png";
 import logo from "@/assets/logo.svg";
 
-import { CommandIcon, SearchIcon } from "lucide-react";
 import { Icons } from "./icons";
 import Image from "next/image";
 
