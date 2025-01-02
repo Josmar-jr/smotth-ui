@@ -6,4 +6,64 @@ author: josmarjr
 published: true
 ---
 
-<ComponentCodePreview name="card-pulse-border" />
+<ComponentCodePreview name="card-pulse-border-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://smooth-ui/r/card-pulse-border"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="card-pulse-border"  />
+
+<Step>Copy the highlighted spotlight animation into tailwind.config.js file</Step>
+
+<ComponentSource name="card-pulse-border-talwindcss.config" noExpand />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+### CardPulseBorder
+               
+| Name               | Default                   | Description                                              
+| ------------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------
+| **children**       | **div**                   | **React.ReactNode**<div>The child elements</div>                  
+| **className**      | **—**                     | **String**<div>The class name of component.</div>
+| **ref**            | **—**                     | **React.Ref**<div>Reference access to HTML render element</div>
+
+<hr className="border-grey-600 my-8" />
+### CardPulseBorderOutline
+               
+| Name               | Default                   | Description                                              
+| ------------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------   
+| **className**      | **—**                     | **String**<div>The class name of component.</div>
+
+<hr className="border-grey-600 my-8" />
+### CardPulseBorderContent
+               
+| Name               | Default                   | Description                                              
+| ------------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------
+| **children**       | **div**                   | **React.ReactNode**<div>The child elements</div>                  
+| **className**      | **—**                     | **String**<div>The class name of component.</div>
+| **ref**            | **—**                     | **React.Ref**<div>Reference access to HTML render element</div>

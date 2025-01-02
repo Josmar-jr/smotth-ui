@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         outline: "border hover:bg-fd-accent hover:text-grey-300",
-        ghost: "hover:bg-fd-accent hover:text-grey-100",
+        ghost: "hover:bg-grey- hover:text-grey-100",
         secondary: "bg-grey-600 text-fd-secondary-foreground",
       },
       size: {

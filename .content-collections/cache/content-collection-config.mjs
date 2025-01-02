@@ -21,7 +21,7 @@ var Index = {
     },
     "spotlight-talwindcss.config": {
       name: "spotlight-talwindcss.config",
-      type: "registry:example",
+      type: "registry:config",
       registryDependencies: ["spotlight-talwindcss.config"],
       files: ["src/registry/config/spotlight-talwindcss.config.ts"],
       component: React.lazy(
@@ -110,8 +110,34 @@ var Index = {
       subcategory: "undefined",
       chunks: []
     },
+    "card-pulse-border-talwindcss.config": {
+      name: "card-pulse-border-talwindcss.config",
+      type: "registry:config",
+      registryDependencies: ["card-pulse-border-talwindcss.config"],
+      files: ["src/registry/config/card-pulse-border-talwindcss.config.ts"],
+      component: React.lazy(
+        () => import("@/registry/config/card-pulse-border-talwindcss.config.ts")
+      ),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "card-pulse-border": {
       name: "card-pulse-border",
+      type: "registry:example",
+      registryDependencies: ["card-pulse-border"],
+      files: ["src/registry/smooth-ui/card-pulse-border.tsx"],
+      component: React.lazy(
+        () => import("@/registry/smooth-ui/card-pulse-border.tsx")
+      ),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "card-pulse-border-demo": {
+      name: "card-pulse-border-demo",
       type: "registry:example",
       registryDependencies: ["card-pulse-border"],
       files: ["src/registry/example/card-pulse-border-demo.tsx"],
