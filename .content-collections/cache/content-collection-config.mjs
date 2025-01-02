@@ -290,7 +290,7 @@ import { codeImport } from "remark-code-import";
 import remarkGfm from "remark-gfm";
 import { createHighlighter } from "shiki";
 var prettyCodeOptions = {
-  theme: "github-dark-default",
+  theme: "min-dark",
   getHighlighter: (options) => createHighlighter({
     ...options
   }),

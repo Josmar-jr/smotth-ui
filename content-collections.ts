@@ -1,4 +1,3 @@
-import { noir } from "@/utils/custom-theme";
 import { rehypeComponent } from "@/utils/rehype-component";
 import { rehypeNpmCommand } from "@/utils/rehype-npm-command";
 import { defineCollection, defineConfig } from "@content-collections/core";
@@ -11,7 +10,7 @@ import remarkGfm from "remark-gfm";
 import { createHighlighter } from "shiki";
 
 const prettyCodeOptions: Options = {
-  theme: "github-dark-default",
+  theme: "min-dark",
   getHighlighter: (options) =>
     createHighlighter({
       ...options,
@@ -79,7 +78,6 @@ const pages = defineCollection({
     });
     return {
       ...document,
-
       slugAsParams: document._meta.path,
       body: {
         raw: document.content,
