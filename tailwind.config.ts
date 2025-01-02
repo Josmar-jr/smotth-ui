@@ -48,7 +48,7 @@ export default {
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
-        "spin-fast": "spin .6s linear",
+        "border-width": "border-width 3s infinite alternate",
       },
       keyframes: {
         spotlight: {
@@ -59,6 +59,16 @@ export default {
           "100%": {
             opacity: "1",
             transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+        "border-width": {
+          from: {
+            width: "10%",
+            opacity: "0",
+          },
+          to: {
+            width: "72%",
+            opacity: "1",
           },
         },
       },

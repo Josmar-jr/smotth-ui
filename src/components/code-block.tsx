@@ -159,7 +159,7 @@ function CopyButton({
         buttonVariants({
           variant: "ghost",
         }),
-        "transition-opacity group-hover:opacity-100",
+        "transition-opacity group-hover:opacity-100 text-white",
         className
       )}
       aria-label="Copy Text"

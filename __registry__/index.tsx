@@ -107,5 +107,18 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: [],
     },
+    "card-pulse-border": {
+      name: "card-pulse-border",
+      type: "registry:example",
+      registryDependencies: ["card-pulse-border"],
+      files: ["src/registry/example/card-pulse-border-demo.tsx"],
+      component: React.lazy(
+        () => import("@/registry/example/card-pulse-border-demo.tsx")
+      ),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: [],
+    },
   },
 };

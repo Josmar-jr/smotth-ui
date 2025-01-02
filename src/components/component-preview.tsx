@@ -1,8 +1,10 @@
 "use client";
 
-import { cn } from "@/utils/cn";
-import { RotateCw } from "lucide-react";
 import { useState } from "react";
+import { motion, useAnimation } from "motion/react";
+
+import { cn } from "@/utils/cn";
+
 import { Button } from "./ui/button";
 
 type ComponentPreviewProps = {
@@ -17,12 +19,15 @@ export function ComponentPreview({
   className,
 }: ComponentPreviewProps) {
   const [reTriggerKey, setReTriggerKey] = useState<number>(Date.now());
-  const [isAnimateSpin, setIsAnimateSpin] = useState(false);
+  const [isClicking, setIsClicking] = useState<boolean>(false);
 
-  const reTrigger = () => {
+  const controls = useAnimation();
+
+  const reTrigger = async () => {
+    setIsClicking(true);
+    await controls.start("click");
+    setIsClicking(false);
     setReTriggerKey(Date.now());
-    setIsAnimateSpin(true);
-    setTimeout(() => setIsAnimateSpin(false), 1000);
   };
 
   return (
@@ -35,14 +40,49 @@ export function ComponentPreview({
     >
       {hasReTrigger && (
         <Button
-          className={cn(
-            "absolute right-4 top-3 cursor-pointer z-10 group",
-            isAnimateSpin && "animate-spin-fast"
-          )}
+          className="absolute right-4 top-3 cursor-pointer z-10"
           size="icon"
           onClick={reTrigger}
+          onMouseEnter={() => {
+            if (!isClicking) controls.start("enter");
+          }}
+          onMouseLeave={() => {
+            if (!isClicking) controls.start("leave");
+          }}
         >
-          <RotateCw className="h-4 w-4 text-zinc-500 group-hover:text-grey-100 transition-colors" />
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            transition={{ type: "spring", stiffness: 250, damping: 25 }}
+            variants={{
+              leave: {
+                rotate: "0deg",
+              },
+              click: {
+                rotate: "360deg",
+                transition: {
+                  duration: 0.7,
+                  ease: "easeInOut",
+                },
+              },
+              enter: {
+                rotate: "-50deg",
+              },
+            }}
+            animate={controls}
+          >
+            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+            <path d="M16 16h5v5" />
+          </motion.svg>
         </Button>
       )}
       {component}

@@ -41,10 +41,16 @@ export const NAV_LIST_ITEMS: NavigationGroup[] = [
       {
         name: "Spotlight",
         href: "/docs/components/spotlight",
+        isNew: true,
       },
       {
         name: "Spotlight Card",
         href: "/docs/components/spotlight-card",
+        isNew: true,
+      },
+      {
+        name: "Card Border Pulse",
+        href: "/docs/components/card-pulse-border",
       },
     ],
   },

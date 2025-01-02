@@ -61,12 +61,12 @@ export function NavigationDesktop() {
                             )}
                             <span>{child.name}</span>
                             {child?.isNew && (
-                              <span className="ml-2 whitespace-nowrap rounded-lg bg-emerald-100 px-2 text-[10px] font-semibold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-50">
+                              <span className="ml-auto whitespace-nowrap rounded-lg bg-emerald-400 px-1.5 text-[10px] font-semibold text-emerald-800">
                                 New
                               </span>
                             )}
                             {child?.isUpdated && (
-                              <span className="ml-2 whitespace-nowrap rounded-lg bg-amber-100 px-2 text-[10px] font-semibold text-amber-800 dark:bg-amber-950 dark:text-amber-50">
+                              <span className="ml-2 whitespace-nowrap rounded-lg bg-amber-400 px-1.5 text-[10px] font-semibold text-amber-800">
                                 Updated
                               </span>
                             )}
