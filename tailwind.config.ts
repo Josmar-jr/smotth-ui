@@ -49,6 +49,8 @@ export default {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         "border-width": "border-width 3s infinite alternate",
+        shine: "shine 6s linear infinite",
+        brightness: "brightness 2.2s linear infinite",
       },
       keyframes: {
         spotlight: {
@@ -69,6 +71,22 @@ export default {
           to: {
             width: "72%",
             opacity: "1",
+          },
+        },
+        shine: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-400% 0",
+          },
+        },
+        brightness: {
+          from: {
+            transform: "skew(-13deg) translateX(-100%)",
+          },
+          to: {
+            transform: "skew(-13deg) translateX(100%)",
           },
         },
       },

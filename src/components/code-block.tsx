@@ -15,7 +15,7 @@ import { cn } from "@/utils/cn";
 import type { ScrollAreaViewportProps } from "@radix-ui/react-scroll-area";
 import { ScrollArea, ScrollBar, ScrollViewport } from "./ui/scroll-area";
 import { useCopyButton } from "@/hooks/use-copy-button";
-import { buttonVariants } from "./ui/button";
+import { Button } from "./ui/button";
 import { TextMorph } from "./text-morph";
 
 export type CodeBlockProps = HTMLAttributes<HTMLElement> & {
@@ -157,13 +157,12 @@ function CopyButton({
   } = useCopyButton(onCopy);
 
   return (
-    <button
+    <Button
       type="button"
+      variant="ghost"
+      size="sm"
       className={cn(
-        buttonVariants({
-          variant: "ghost",
-        }),
-        "transition-opacity group-hover:opacity-100 text-grey-200 !pl-6 text-xs",
+        "transition-opacity group-hover:opacity-100 text-grey-200 !pl-6 text-xs pr-1.5",
         className
       )}
       aria-label="Copy Text"
@@ -172,17 +171,17 @@ function CopyButton({
     >
       <Check
         className={cn(
-          "size-3.5 transition-transform absolute left-1",
+          "!size-3.5 transition-transform absolute left-0.5",
           !checked && "scale-0"
         )}
       />
       <Copy
         className={cn(
-          "size-3.5 transition-transform absolute left-1",
+          "!size-3.5 transition-transform absolute left-0.5",
           checked && "scale-0"
         )}
       />
       <TextMorph>{text}</TextMorph>
-    </button>
+    </Button>
   );
 }

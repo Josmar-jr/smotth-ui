@@ -42,6 +42,7 @@ export function ComponentPreview({
         <Button
           className="absolute right-4 top-3 cursor-pointer z-10"
           size="icon"
+          variant="ghost"
           onClick={reTrigger}
           onMouseEnter={() => {
             if (!isClicking) controls.start("enter");
