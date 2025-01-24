@@ -148,6 +148,19 @@ var Index = {
       category: "undefined",
       subcategory: "undefined",
       chunks: []
+    },
+    "upgrade-to-pro-demo": {
+      name: "upgrade-to-pro-demo",
+      type: "registry:example",
+      registryDependencies: ["card-pulse-border"],
+      files: ["src/registry/example/upgrade-to-pro-demo.tsx"],
+      component: React.lazy(
+        () => import("@/registry/example/upgrade-to-pro-demo.tsx")
+      ),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
     }
   }
 };

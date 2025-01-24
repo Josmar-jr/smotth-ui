@@ -53,4 +53,13 @@ export const NAV_LIST_ITEMS: NavigationGroup[] = [
       },
     ],
   },
+  {
+    name: "Interactivity",
+    children: [
+      {
+        name: "Upgrade to Pro",
+        href: "/docs/components/upgrade-to-pro",
+      },
+    ],
+  },
 ];

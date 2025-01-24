@@ -19,10 +19,10 @@ export function NavigationDesktop() {
   }, [pathname]);
 
   return (
-    <aside className="sticky top-18 hidden h-[calc(100dvh-theme(spacing.16))] w-[240px] xl:w-[266px] px-4 shrink-0 md:block">
-      <div className="h-full w-full">
+    <aside className="sticky top-18 hidden h-[calc(100dvh-theme(spacing.16))] w-[240px] xl:w-[266px] px-4 shrink-0 lg:block">
+      <div className="h-full w-[240px] fixed">
         <nav>
-          <ul role="list" className="h-full">
+          <ul role="list" className="h-full w-full">
             {NAV_LIST_ITEMS.map((item, index) => {
               return (
                 <li key={`${item.name}-${index}`}>
@@ -97,7 +97,7 @@ export function NavigationMobile() {
   };
 
   return (
-    <div className="block w-full pt-8 md:hidden">
+    <div className="block w-full pt-8 lg:hidden">
       <select
         className="block w-full appearance-none rounded-lg border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 dark:border-zinc-800 dark:bg-zinc-950 dark:text-white"
         value={selectedHref}

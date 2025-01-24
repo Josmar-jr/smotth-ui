@@ -80,7 +80,7 @@ export default async function DocPage({ params }: { params: tParams }) {
   }
 
   return (
-    <main className="py-6 w-full max-w-3xl flex-1">
+    <>
       <Breadcrumbs
         backLink="/docs/components"
         currentPage={doc.title}
@@ -91,13 +91,11 @@ export default async function DocPage({ params }: { params: tParams }) {
         <h1 className={cn("scroll-m-10 text-3xl font-bold tracking-tight")}>
           {doc.title}
         </h1>
-        {doc.description && (
-          <p className="paragraph text-balance">{doc.description}</p>
-        )}
+        {doc.description && <p className="paragraph">{doc.description}</p>}
       </div>
       <div className="pb-12 pt-8">
         <Mdx code={doc.body.code} />
       </div>
-    </main>
+    </>
   );
 }

@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 h-[4rem] w-full bg-background">
+    <header className="sticky top-0 z-50 h-[4rem] w-full bg-background shadow-lg shadow-background">
       <nav className="mx-auto flex h-full max-w-[1400px] items-center justify-between gap-6 border-b border-dashed border-white/[0.08] px-4 xl:border-x border-t-0">
         <div className="flex items-end gap-1.5">
           <Link
