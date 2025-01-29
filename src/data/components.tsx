@@ -60,6 +60,10 @@ export const NAV_LIST_ITEMS: NavigationGroup[] = [
         name: "Upgrade to Pro",
         href: "/docs/components/upgrade-to-pro",
       },
+      {
+        name: "Limited Counter",
+        href: "/docs/components/limited-counter",
+      },
     ],
   },
 ];
