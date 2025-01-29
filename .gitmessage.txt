@@ -1,0 +1,9 @@
+# [component-type]: [component-name] - brief description
+
+# Component types: feat, fix, docs, style, refactor, test, chore
+# Scope examples: (components), (hooks), (utils), (docs)
+
+[type](scope): [component-name] - concise description
+
+- [Technical implementation details]
+- [Reference issues with #123]
