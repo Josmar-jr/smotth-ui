@@ -152,10 +152,23 @@ var Index = {
     "upgrade-to-pro-demo": {
       name: "upgrade-to-pro-demo",
       type: "registry:example",
-      registryDependencies: ["card-pulse-border"],
+      registryDependencies: ["upgrade-to-pro"],
       files: ["src/registry/example/upgrade-to-pro-demo.tsx"],
       component: React.lazy(
         () => import("@/registry/example/upgrade-to-pro-demo.tsx")
+      ),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "limited-counter-demo": {
+      name: "limited-counter-demo",
+      type: "registry:example",
+      registryDependencies: ["limited-counter"],
+      files: ["src/registry/example/limited-counter-demo.tsx"],
+      component: React.lazy(
+        () => import("@/registry/example/limited-counter-demo.tsx")
       ),
       source: "",
       category: "undefined",

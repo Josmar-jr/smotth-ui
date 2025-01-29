@@ -36,8 +36,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/_docs2/page.mdx",
-    "src/app/_docs2/asdf/page.tsx",
     "src/app/docs/page.mdx",
     "src/hooks/use-copy-button.tss",
     "src/content/docs/components/upgrade-to-pro.mdx"
